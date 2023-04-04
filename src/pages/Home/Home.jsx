@@ -1,5 +1,5 @@
 import { getTrendsMovies } from 'api/moviedb-api';
-import HomePageITEM from 'components/HomePageITEM/HomePageITEM';
+// import HomePageITEM from 'components/HomePageITEM/HomePageITEM';
 import HomePageList from 'components/HomePageList/HomePageList';
 import { Container, Section } from 'components/common.styled';
 import { useEffect, useState } from 'react';
@@ -41,13 +41,11 @@ const HomePage = () => {
         {status === appStatus.RESOLVED && movies?.length !== 0 && (
           <HomePageList movies={movies}></HomePageList>
         )}
-        {/* {status === appStatus.REJECTED && (
-          <MessageBox>Error - {error.message}</MessageBox>
-        )}
+        {status === appStatus.REJECTED && <h1>Error - {error.message}</h1>}
 
         {status === appStatus.RESOLVED && movies?.length === 0 && (
-          <MessageBox>Information not found</MessageBox>
-        )} */}
+          <h1>Information not found</h1>
+        )}
       </Container>
     </Section>
   );

@@ -1,6 +1,5 @@
-import { Suspense } from 'react';
 import { Outlet, useLocation } from 'react-router-dom';
-import { Header, MainContainer, Nav, NavItem } from './SharedLayout.styled';
+import { Header, Nav, NavItem } from './SharedLayout.styled';
 import { Container } from 'components/common.styled';
 
 const SharedLayout = () => {
