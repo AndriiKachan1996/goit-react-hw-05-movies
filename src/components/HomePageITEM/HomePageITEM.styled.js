@@ -9,7 +9,7 @@ export const Image = styled.img`
 
 export const Thumb = styled.div`
   width: 100%;
-  height: 900px;
+  height: 600px;
 `;
 
 export const P = styled.p`
