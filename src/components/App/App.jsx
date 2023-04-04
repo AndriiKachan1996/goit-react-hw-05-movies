@@ -1,17 +1,37 @@
-import { Routes, Route } from 'react-router-dom';
+// import SharedLayout from 'components/SharedLayout/SharedLayout';
+import Cast from 'components/Cast/Cast';
+import SharedLayout from '..//SharedLayout/SharedLayout';
+import HomePage from 'pages/Home/Home';
+import MovieInfo from 'pages/MovieInfo/MovieInfo';
+import Movies from 'pages/Movies/Movies';
+import { Route, Routes } from 'react-router-dom';
+import Reviews from 'components/Reviews/Reviews';
 
-import Header from 'components/Header/Header';
-import HomePage from 'pages/Home';
-import MoviesPage from 'pages/Movies';
-export const App = () => {
+const App = () => {
   return (
-    <>
-      <Header></Header>
+    <Routes>
+      <Route path="/" element={<SharedLayout />}>
+        <Route index element={<HomePage />} />
+        <Route path="movies" element={<Movies />} />
+        <Route path="movies/:moveID" element={<MovieInfo />}>
+          <Route path="cast" element={<Cast />} />
+          <Route path="review" element={<Reviews />} />
+        </Route>
+      </Route>
+    </Routes>
+    // <Routes>
+    //   <Route path="/" element={<SharedLayout />}>
+    //     <Route index element={<Home />} />
+    //     <Route path="movies" element={<Movies />}></Route>
+    // <Route path="movies/:moveID" element={<MovieInfo />}>
+    //   <Route path="cast" element={<Cast />} />
+    //   <Route path="review" element={<Review />} />
+    // </Route>
 
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/movies" element={<MoviesPage />} />
-      </Routes>
-    </>
+    //     <Route path="*" element={<NoMatch />} />
+    //   </Route>
+    // </Routes>
   );
 };
+
+export default App;
