@@ -1,19 +1,20 @@
-import { Image, ImageBox } from './HomePageITEM.styled';
+import PropTypes from 'prop-types';
+import { Image, ItemWrapp, P, Thumb } from './HomePageITEM.styled';
 
 const HomePageITEM = ({ movieName, movieImage }) => {
   return (
-    <>
-      <ImageBox>
+    <ItemWrapp>
+      <Thumb>
         <Image src={movieImage} alt={`Image for ${movieName}`}></Image>
-      </ImageBox>
+      </Thumb>
 
-      <p>{movieName}</p>
-    </>
+      <P>{movieName}</P>
+    </ItemWrapp>
   );
 };
 
-// HomePageITEM.propTypes = {
-//   movieName: PropTypes.string.isRequired,
-//   movieImage: PropTypes.string.isRequired,
-// };
+HomePageITEM.propTypes = {
+  movieName: PropTypes.string.isRequired,
+  movieImage: PropTypes.string.isRequired,
+};
 export default HomePageITEM;

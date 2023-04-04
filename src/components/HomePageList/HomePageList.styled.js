@@ -4,22 +4,14 @@ export const ListWrapp = styled.ul`
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  /* gap: 10px; */
-  margin: -10px;
+  margin: -20px;
 `;
 
 export const ListItemCard = styled.li`
-  flex-basis: calc((100% - 2 * 100px) / 10);
-  background-color: #607d8b;
-  margin: 10px;
-`;
+  flex-basis: calc((100% - 2 * 80px) / 4);
 
-export const Title = styled.p`
-  text-decoration: none;
-  color: #fff;
-  padding: 5px;
-  text-align: center;
-  &:hover {
-    color: yellow;
-  }
+  background-color: white;
+  margin: 20px;
+  box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
+    0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
 `;

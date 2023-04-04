@@ -23,7 +23,7 @@ const MovieCard = ({ movieInfo }) => {
           src={
             movieInfo.poster_path
               ? getImagePath(movieInfo.poster_path)
-              : 'https://via.placeholder.com/300x400'
+              : 'https://via.placeholder.com/300x400/bdc5f2/2b2323?text=Image+not+found'
           }
         ></Image>
       </ImageWrapp>

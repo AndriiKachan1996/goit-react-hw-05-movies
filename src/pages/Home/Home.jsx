@@ -3,6 +3,7 @@ import { getTrendsMovies } from 'api/moviedb-api';
 import HomePageList from 'components/HomePageList/HomePageList';
 import { Container, Section } from 'components/common.styled';
 import { useEffect, useState } from 'react';
+import { HomeTitle } from './Home.styled';
 
 const appStatus = {
   IDLE: 0,
@@ -37,7 +38,7 @@ const HomePage = () => {
   return (
     <Section>
       <Container>
-        <h1>Movies Week Trending</h1>
+        <HomeTitle>Movies Week Trending</HomeTitle>
         {status === appStatus.RESOLVED && movies?.length !== 0 && (
           <HomePageList movies={movies}></HomePageList>
         )}

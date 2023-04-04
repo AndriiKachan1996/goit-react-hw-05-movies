@@ -10,10 +10,10 @@ const SharedLayout = () => {
       <Header>
         <Nav>
           <NavItem to="/" state={{ from: location }}>
-            Home
+            🏠 Home
           </NavItem>
           <NavItem to="/movies" state={{ from: location }}>
-            Movies
+            📽️ Movies
           </NavItem>
         </Nav>
       </Header>

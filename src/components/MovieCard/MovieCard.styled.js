@@ -4,11 +4,12 @@ export const MovieCardWrapp = styled.div`
   display: flex;
   gap: 20px;
   border-bottom: 1px solid #757575;
-  padding: 20px;
+
+  margin-top: 200px;
 `;
 export const ImageWrapp = styled.div`
-  width: 300px;
-  height: 450px;
+  width: 500px;
+  height: 650px;
   overflow: hidden;
 
   border-radius: 10px;
