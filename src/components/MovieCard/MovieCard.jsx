@@ -1,10 +1,12 @@
 import PropTypes from 'prop-types';
-import { getImagePath } from 'api/moviedb-api';
+import { getImagePath, getMovieYear } from 'api/moviedb-api';
 import {
   Image,
   ImageWrapp,
   InfoWrapp,
   MovieCardWrapp,
+  MovieName,
+  MovieTagLine,
 } from './MovieCard.styled';
 import MovieCardINFO from 'components/MovieCardINFO/MovieCardINFO';
 
@@ -13,9 +15,6 @@ const MovieCard = ({ movieInfo }) => {
     return genres.map(genre => genre.name).join(', ');
   };
 
-  const getReleaseYear = releaseDate => {
-    return releaseDate !== '' ? `(${new Date(releaseDate).getFullYear()})` : '';
-  };
   return (
     <MovieCardWrapp>
       <ImageWrapp>
@@ -28,10 +27,10 @@ const MovieCard = ({ movieInfo }) => {
         ></Image>
       </ImageWrapp>
       <InfoWrapp>
-        <h1>
-          {movieInfo.title} {getReleaseYear(movieInfo.release_date)}
-        </h1>
-        <p>{movieInfo.tagline}</p>
+        <MovieName>
+          {movieInfo.title} {getMovieYear(movieInfo.release_date)}
+        </MovieName>
+        <MovieTagLine>{movieInfo.tagline}</MovieTagLine>
         <MovieCardINFO title="Vote:" description={movieInfo.vote_average} />
         <MovieCardINFO title="Popularity:" description={movieInfo.popularity} />
         <MovieCardINFO title="Overview:" description={movieInfo.overview} />

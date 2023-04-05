@@ -24,7 +24,7 @@ export const NavItem = styled(NavLink)`
   padding: 30px;
   text-decoration: none;
   font-weight: 700;
-  font-size: 60px;
+  font-size: 40px;
   color: #fff;
   color: #120cc7;
   text-shadow: 1px 1px 1px #050429, 2px 2px 1px #050429;

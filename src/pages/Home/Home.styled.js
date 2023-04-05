@@ -1,10 +1,9 @@
 import styled from '@emotion/styled';
 
 export const HomeTitle = styled.h1`
-  color: #120cc7;
-  text-shadow: 1px 1px 1px #050429, 2px 2px 1px #050429;
+  text-shadow: 1px 0px 0px #050429, 0px 1px 1px #050429;
   text-align: center;
-  font-size: 60px;
+  font-size: 40px;
   font-family: math;
 
   margin: 30px 0;

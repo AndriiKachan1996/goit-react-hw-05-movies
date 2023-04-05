@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types';
-import { InfoLineWrapp } from './MovieCardINFO.styled';
+import { InfoLineWrapp, Title } from './MovieCardINFO.styled';
 
 const MovieCardINFO = ({ title, description }) => {
   return (
     <InfoLineWrapp>
-      <span>{title}</span>
+      <Title>{title}</Title>
       <span>{description}</span>
     </InfoLineWrapp>
   );

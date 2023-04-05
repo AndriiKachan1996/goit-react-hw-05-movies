@@ -40,7 +40,7 @@ export async function getMovieDesc(movieID) {
     );
   }
 }
-export async function getMovieReview(movieID) {
+export async function getMovieReviews(movieID) {
   try {
     const responce = await fetch(
       `${BASE_URL}movie/${movieID}/reviews?api_key=${API_KEY}&language=en-US&page=1`
@@ -61,15 +61,14 @@ export async function getMovieReview(movieID) {
   }
 }
 
-export async function getMovieCredits(movieID) {
+export async function getMovieCast(movieID) {
   try {
     const responce = await fetch(
       `${BASE_URL}movie/${movieID}/credits?api_key=${API_KEY}&language=en-US&page=1`
     );
     if (responce.status === 200) {
-      const resp = await responce.json();
-      //console.dir(resp);
-      const results = resp.cast.map(item => {
+      const data = await responce.json();
+      const results = data.cast.map(item => {
         return {
           id: item.id,
           name: item.name,
@@ -89,7 +88,7 @@ export async function getMovieCredits(movieID) {
   }
 }
 
-export async function searchMovie(query = '') {
+export async function getSearchMovie(query = '') {
   try {
     if (query === '') return [];
     const responce = await fetch(
@@ -114,5 +113,11 @@ export async function searchMovie(query = '') {
 }
 
 export function getImagePath(image) {
-  return image ? BASE_IMAGE_URL + image : 'https://via.placeholder.com/300x400';
+  return image
+    ? BASE_IMAGE_URL + image
+    : 'https://via.placeholder.com/300x400/bdc5f2/2b2323?text=Image+not+found';
 }
+
+export const getMovieYear = releaseDate => {
+  return releaseDate !== '' ? `(${new Date(releaseDate).getFullYear()})` : '';
+};

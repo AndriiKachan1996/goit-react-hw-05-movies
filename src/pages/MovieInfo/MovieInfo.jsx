@@ -7,6 +7,8 @@ import {
   InfoContainer,
   InfoLink,
   InfoList,
+  InfoTitle,
+  MovieItem,
 } from './MovieInfo.styled';
 import MovieCard from 'components/MovieCard/MovieCard';
 
@@ -48,22 +50,21 @@ const MovieInfo = () => {
   return (
     <Section>
       <Container>
-        {/* Movie Info */}
         <BackLink to={backLinkHref.current} state={{ from: location }}>
-          Go back
+          ⬅️Go back
         </BackLink>
         {movieInfo && movieInfo.id && (
           <MovieCard movieInfo={movieInfo}></MovieCard>
         )}
         <InfoContainer>
-          <h3>Additional information</h3>
+          <InfoTitle>Additional information</InfoTitle>
           <InfoList>
-            <li>
+            <MovieItem>
               <InfoLink to="cast">Cast</InfoLink>
-            </li>
-            <li>
+            </MovieItem>
+            <MovieItem>
               <InfoLink to="review">Review</InfoLink>
-            </li>
+            </MovieItem>
           </InfoList>
         </InfoContainer>
 
