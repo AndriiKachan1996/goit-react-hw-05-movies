@@ -7,7 +7,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url('./Images/cinema-concept-with-clapperboard-popcorn.jpg');
+  /* background-image: url('./Images/cinema-concept-with-clapperboard-popcorn.jpg'); */
   background-size: cover;
   position: relative;
 
