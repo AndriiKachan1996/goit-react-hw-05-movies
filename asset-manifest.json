@@ -1,14 +1,13 @@
 {
   "files": {
-    "main.css": "/goit-react-hw-05-movies/static/css/main.5a977ee7.css",
+    "main.css": "/goit-react-hw-05-movies/static/css/main.a5791a42.css",
     "main.js": "/goit-react-hw-05-movies/static/js/main.6fb1a84e.js",
-    "static/media/cinema-concept-with-clapperboard-popcorn.jpg": "/goit-react-hw-05-movies/static/media/cinema-concept-with-clapperboard-popcorn.ee965efe959e222915a6.jpg",
     "index.html": "/goit-react-hw-05-movies/index.html",
-    "main.5a977ee7.css.map": "/goit-react-hw-05-movies/static/css/main.5a977ee7.css.map",
+    "main.a5791a42.css.map": "/goit-react-hw-05-movies/static/css/main.a5791a42.css.map",
     "main.6fb1a84e.js.map": "/goit-react-hw-05-movies/static/js/main.6fb1a84e.js.map"
   },
   "entrypoints": [
-    "static/css/main.5a977ee7.css",
+    "static/css/main.a5791a42.css",
     "static/js/main.6fb1a84e.js"
   ]
 }
