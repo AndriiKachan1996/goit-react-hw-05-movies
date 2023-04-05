@@ -1,6 +1,6 @@
-import { getMovieReviews } from 'api/moviedb-api';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import { getMovieReviews } from 'api/moviedb-api';
 import { RewContent, RewList, RewTitle } from './Reviews.styled';
 
 const Review = () => {
@@ -28,7 +28,7 @@ const Review = () => {
       </RewList>
     );
   if (reviews?.length === 0)
-    return <h1>We don't have any reviews for this movie</h1>;
+    return <p>We don't have any reviews for this movie</p>;
 };
 
 export default Review;

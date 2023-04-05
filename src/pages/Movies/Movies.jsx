@@ -1,16 +1,18 @@
+import { useEffect, useState } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import { getSearchMovie } from 'api/moviedb-api';
 import HomePageList from 'components/HomePageList/HomePageList';
 import SearchForm from 'components/SearchForm/SearchForm';
 import { Container, Section } from 'components/common.styled';
-import { useEffect, useState } from 'react';
-import { useSearchParams } from 'react-router-dom';
-const appStatus = {
-  IDLE: 0,
-  PENDING: 1,
-  RESOLVED: 2,
-  REJECTED: 4,
-};
+
 const Movies = () => {
+  const appStatus = {
+    IDLE: 0,
+    PENDING: 1,
+    RESOLVED: 2,
+    REJECTED: 4,
+  };
+
   const [searchParams, setSearchParams] = useSearchParams();
   const [query, setQuery] = useState('');
   const [searchResult, setSearchResult] = useState(null);
@@ -50,7 +52,18 @@ const Movies = () => {
       setSearchResult(null);
       return;
     }
-  }, [query, setSearchResult, setStatus, queryStr, setQuery, setError]);
+  }, [
+    query,
+    setSearchResult,
+    setStatus,
+    queryStr,
+    setQuery,
+    setError,
+    appStatus.PENDING,
+    appStatus.RESOLVED,
+    appStatus.REJECTED,
+    appStatus.IDLE,
+  ]);
 
   return (
     <Section>

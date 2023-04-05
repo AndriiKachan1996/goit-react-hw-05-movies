@@ -1,6 +1,6 @@
-import { getMovieCast } from 'api/moviedb-api';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import { getMovieCast } from 'api/moviedb-api';
 import { CastList } from './Cast.styled';
 import CastCard from 'components/CastITEM/CastITEM';
 
@@ -27,8 +27,7 @@ const Cast = () => {
         {casts && casts.map(cast => <CastCard key={cast.id} cast={cast} />)}
       </CastList>
     );
-  if (casts?.length === 0)
-    return <h1>We don't have any casts for this movie</h1>;
+  if (casts?.length === 0) return <p>We don't have any casts for this movie</p>;
 };
 
 export default Cast;

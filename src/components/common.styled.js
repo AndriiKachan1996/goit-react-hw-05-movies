@@ -6,5 +6,5 @@ export const Container = styled.div`
 `;
 
 export const Section = styled.section`
-  padding-bottom: 10px;
+  padding-bottom: 60px;
 `;

@@ -1,10 +1,6 @@
 import styled from '@emotion/styled';
 
-export const ItemWrapp = styled.div`
-  &:hover {
-    scale: 1.02;
-  }
-`;
+export const ItemWrapp = styled.div``;
 
 export const Image = styled.img`
   object-fit: cover;

@@ -1,6 +1,5 @@
-import { Link, useLocation } from 'react-router-dom';
 import PropTypes from 'prop-types';
-
+import { Link, useLocation } from 'react-router-dom';
 import { ListItemCard, ListWrapp } from './HomePageList.styled';
 import HomePageITEM from 'components/HomePageITEM/HomePageITEM';
 

@@ -1,7 +1,7 @@
-import { getMovieDesc } from 'api/moviedb-api';
-import { Container, Section } from 'components/common.styled';
 import { Suspense, useEffect, useRef, useState } from 'react';
 import { Outlet, useLocation, useParams } from 'react-router-dom';
+import { getMovieDesc } from 'api/moviedb-api';
+import { Container, Section } from 'components/common.styled';
 import {
   BackLink,
   InfoContainer,

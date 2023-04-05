@@ -6,15 +6,11 @@ export const CastItemdWrapp = styled.li`
   box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
     0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
   flex-basis: Calc((100% - 5 * 10px) / 6);
-
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-content: center;
   flex-wrap: wrap;
-  &:hover {
-    scale: 1.04;
-  }
 `;
 
 export const CastBox = styled.div`
@@ -35,10 +31,8 @@ export const CastName = styled.p`
   text-align: center;
 `;
 export const CastCharacter = styled.p`
-  font-size: 22px;
-
+  font-size: 18px;
   margin: 0;
-
   text-align: center;
 `;
 

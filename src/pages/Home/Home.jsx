@@ -1,8 +1,7 @@
+import { useEffect, useState } from 'react';
 import { getTrendsMovies } from 'api/moviedb-api';
-// import HomePageITEM from 'components/HomePageITEM/HomePageITEM';
 import HomePageList from 'components/HomePageList/HomePageList';
 import { Container, Section } from 'components/common.styled';
-import { useEffect, useState } from 'react';
 import { HomeTitle } from './Home.styled';
 
 const appStatus = {
@@ -13,9 +12,9 @@ const appStatus = {
 };
 const HomePage = () => {
   const [movies, setMovies] = useState(null);
-
   const [status, setStatus] = useState(appStatus.IDLE);
   const [error, setError] = useState(null);
+
   useEffect(() => {
     if (movies) {
       setStatus(appStatus.RESOLVED);

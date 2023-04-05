@@ -49,7 +49,6 @@ export const InfoTitle = styled.h3`
   font-size: 50px;
   text-align: center;
   text-shadow: 1px 0px 0px #050429, 0px 1px 1px #050429;
-
   font-family: math;
   margin: 30px 0;
 `;

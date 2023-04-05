@@ -1,4 +1,5 @@
 import { Outlet, useLocation } from 'react-router-dom';
+import { Suspense } from 'react';
 import { Header, Nav, NavItem } from './SharedLayout.styled';
 import { Container } from 'components/common.styled';
 
@@ -17,8 +18,11 @@ const SharedLayout = () => {
           </NavItem>
         </Nav>
       </Header>
-
-      <Outlet />
+      <Suspense fallback={<>Loading...</>}>
+        <>
+          <Outlet />
+        </>
+      </Suspense>
     </Container>
   );
 };
