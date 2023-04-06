@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkAndriiKachan1996=self.webpackChunkAndriiKachan1996||[]).push([[234],{234:function(n,e,t){t.r(e),t.d(e,{default:function(){return d}});var i,r=t(666),a=t(168),c=t(931).Z.p(i||(i=(0,a.Z)(["\n  text-align: center;\n  margin-top: 800px;\n  font-size: 80px;\n  font-weight: 700;\n  text-shadow: 2px 2px red;\n"]))),u=t(184),d=function(){return(0,u.jsx)(r.W,{children:(0,u.jsx)(c,{children:" 404 ERROR! Page not found\ud83d\udc40"})})}}}]);
-//# sourceMappingURL=234.107ba210.chunk.js.map
