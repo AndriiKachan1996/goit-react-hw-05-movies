@@ -19,8 +19,9 @@ const App = () => {
           <Route path="cast" element={<Cast />} />
           <Route path="review" element={<Reviews />} />
         </Route>
-      </Route>
       <Route path="*" element={<InvalidUrl />}></Route>
+
+      </Route>
     </Routes>
   );
 };
